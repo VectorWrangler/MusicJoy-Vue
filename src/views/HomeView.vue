@@ -8,15 +8,9 @@
             <h2>MusicJoy</h2>
           </div>
           
-          <div style="flex: 1;">
-            <n-menu 
-              v-model:value="activeKey" 
-              mode="horizontal" 
-              :options="menuOptions"
-            />
-          </div>
           
-          <div style="margin: 0 20px;">
+          
+          <div style="margin: 0 20px;flex: 1;">
             <n-input placeholder="搜索音乐" style="width: 200px" />
           </div>
           
@@ -34,7 +28,7 @@
           width="200"
         >
           <div style="padding: 20px 0;">
-            <n-menu :options="sidebarOptions" />
+            <n-menu :options="navOptions" />
           </div>
         </n-layout-sider>
         
@@ -104,7 +98,7 @@ import type { MenuOption } from 'naive-ui'
 
 const activeKey = ref<string>('discover')
 
-const menuOptions: MenuOption[] = [
+const navOptions: MenuOption[] = [
   {
     label: '发现音乐',
     key: 'discover',
@@ -113,32 +107,5 @@ const menuOptions: MenuOption[] = [
     label: '我的音乐',
     key: 'my',
   },
-  {
-    label: '朋友',
-    key: 'friends',
-  },
-  {
-    label: '商城',
-    key: 'shop',
-  }
-]
-
-const sidebarOptions: MenuOption[] = [
-  {
-    label: '推荐',
-    key: 'recommend',
-  },
-  {
-    label: '排行榜',
-    key: 'rank',
-  },
-  {
-    label: '歌单',
-    key: 'playlist',
-  },
-  {
-    label: '电台',
-    key: 'radio',
-  }
 ]
 </script>
