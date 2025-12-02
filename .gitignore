@@ -40,7 +40,6 @@ auto-imports.d.ts
 components.d.ts
 
 # Bun
-bun.lock
 .bun/
 
 # Temporary files
